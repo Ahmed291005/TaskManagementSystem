@@ -6,8 +6,8 @@ A powerful and secure **Task Management System** built using Django, Django REST
 
 ## 📸 Project Preview
 
-![Task Dashboard](https://via.placeholder.com/800x400?text=Dashboard+Preview)
-> *Preview of user-specific tasks, status badges, and actions like edit/delete.*
+![Login](1.png)
+![Sign up](2.png)
 
 ---
 
