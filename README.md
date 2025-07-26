@@ -1,4 +1,3 @@
-```markdown
 # ✅ Task Management System – REST API with PostgreSQL & JWT Auth
 
 A powerful and secure **Task Management System** built using Django, Django REST Framework, and PostgreSQL. This application enables users to **Create**, **Read**, **Update**, and **Delete** (CRUD) their tasks, with features to manage **status**, **priority**, and **authentication** using **JWT**. Perfect for boosting productivity and staying organized.
