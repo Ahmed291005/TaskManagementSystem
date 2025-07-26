@@ -1,0 +1,44 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta 
+        name="keyword" 
+        content="
+            Todo,
+            Todo list , 
+            Todo Manager ,
+            Task manager , 
+            organize ,
+            priority"
+        >
+    <meta name="description" , content="Best Todo Manager for manage all your task efciantly">
+    <meta name="author" , content="Alan">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="csrf-token" content="{{ csrf_token }}"> <!--Add CSRF token to the request header-->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="https://cdn.jsdelivr.net/npm/htmx.org@2.0.5/dist/htmx.min.js"></script>
+
+    {% block title %}{% endblock title %}
+</head>
+<body class="min-h-screen bg-gradient-to-b from-[#EDF6F9] to-[#B8DAD3] ">
+        {% include 'todos/partials/navbar.html' %}
+
+    <main class="container mx-auto px-2 md:px-16 lg:px-32 xl:px-48 2xl:px-64"></main>
+        {% block content %}{% endblock %}
+    </main>
+
+    <div id="dialog-container"></div>
+    
+<script>
+    // Add CSRF token to all HTMX requests
+  document.body.addEventListener('htmx:configRequest', (event) => {
+    const csrfToken = document.querySelector('meta[name="csrf-token"]').content;
+    event.detail.headers['X-CSRFToken'] = csrfToken;
+  });
+</script>
+
+</body>
+</html>
